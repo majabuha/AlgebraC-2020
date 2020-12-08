@@ -6,7 +6,7 @@ namespace _01_operatori
     {
         static void Main(string[] args)
         {
-            //Unos podataka
+            //Unos podataka  
             int prviBroj;
             Console.WriteLine("Unesite prvi broj: ");
             prviBroj = int.Parse(Console.ReadLine());
