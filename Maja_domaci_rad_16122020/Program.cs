@@ -28,6 +28,7 @@ namespace Maja_domaci_rad_16122020
 
             Rerna.Ispeci(ref K2);
 
+
             for (int i = 0; i < K1.listaSastojaka.Count; i++)
             {
                 string Sastojak = K1.listaSastojaka[i];
@@ -35,6 +36,16 @@ namespace Maja_domaci_rad_16122020
         
                 Console.WriteLine("Dodaj sastojak {0}, {1} grama.", Sastojak, Kolicina);
             }
+            
+            if (K1.jePecen == true)
+            {
+                Console.WriteLine("Kolac je pecen!");
+            }
+            else
+            {
+                Console.WriteLine("Kolac nije pecen!");
+            }
+
             double UkupnaKolicina = 0;
 
             foreach (var item in K1.listaKolicina)
@@ -43,6 +54,8 @@ namespace Maja_domaci_rad_16122020
 
             }
             Console.WriteLine("Ukupna tezina je: {0} kg.", Math.Round(((double)UkupnaKolicina / 1000), 2));
+
+            
 
             if (K1.jePecen == false)
             {
