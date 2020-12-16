@@ -11,7 +11,7 @@ namespace Maja_domaci_rad_16122020
             Console.WriteLine("Domaci rad 16.12.2020. - Cokoladna ekstaza :)");
 
             Kolac K1 = new Kolac("Cokoladna ekstaza");
-            
+                        
             K1.DodajSastojak("Margarin", 200);
             K1.DodajSastojak("Secer", 100);
             K1.DodajSastojak("Cokolada", 300);
@@ -28,15 +28,19 @@ namespace Maja_domaci_rad_16122020
 
             Rerna.Ispeci(ref K2);
 
+                              
+            double UkupnaKolicina = 0;
 
-            for (int i = 0; i < K1.listaSastojaka.Count; i++)
+            foreach (var item in K1.listaSastojaka)
             {
-                string Sastojak = K1.listaSastojaka[i];
-                int Kolicina = K1.listaKolicina[i];
-        
-                Console.WriteLine("Dodaj sastojak {0}, {1} grama.", Sastojak, Kolicina);
+                Console.WriteLine("Dodaj sastojak {0}, {1} grama.", item.Sastojak, item.Kolicina);
+               
+                
+                UkupnaKolicina += item.Kolicina;
+
             }
-            
+            Console.WriteLine("Ukupna tezina je: {0} kg.", Math.Round(((double)UkupnaKolicina / 1000), 2));
+
             if (K1.jePecen == true)
             {
                 Console.WriteLine("Kolac je pecen!");
@@ -46,16 +50,6 @@ namespace Maja_domaci_rad_16122020
                 Console.WriteLine("Kolac nije pecen!");
             }
 
-            double UkupnaKolicina = 0;
-
-            foreach (var item in K1.listaKolicina)
-            {
-                UkupnaKolicina += item;
-
-            }
-            Console.WriteLine("Ukupna tezina je: {0} kg.", Math.Round(((double)UkupnaKolicina / 1000), 2));
-
-            
 
             if (K1.jePecen == false)
             {

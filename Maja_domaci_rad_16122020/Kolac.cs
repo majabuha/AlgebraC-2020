@@ -7,20 +7,22 @@ namespace Maja_domaci_rad_16122020
     {
        
         public bool jePecen = false;
-        public List<string> listaSastojaka = new List<string>();
-        public List<int> listaKolicina = new List<int>();
+
+        public List<Sastojci> listaSastojaka = new List<Sastojci>();
         
-        
+
+
         public Kolac (string tip)
         {
-
+            
         }
 
         internal void DodajSastojak(string Sastojak, int Kolicina)
         {
-            listaSastojaka.Add(Sastojak);
-            listaKolicina.Add(Kolicina);
-        }
-      
+            Sastojci sastojak = new Sastojci(Sastojak, Kolicina);
+            listaSastojaka.Add(sastojak);
+         }
+ 
     }
+
 }
