@@ -2,7 +2,11 @@
 
 namespace _08_03_vozila
 {
+<<<<<<< HEAD
     internal class Vozilo
+=======
+    public class Vozilo
+>>>>>>> c636db93544f07e247aecbf038b0028e6c082f55
     {
         public Vozilo(string Naziv, string Boja, int KS)
         {

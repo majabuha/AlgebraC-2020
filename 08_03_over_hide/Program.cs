@@ -7,7 +7,11 @@ namespace _08_03_over_hide
         static void Main(string[] args)
         {
             BaseClass isReallyBase = new BaseClass();
+<<<<<<< HEAD
             BaseClass isReallyDerived = new DerivedClass();
+=======
+            BaseClass isReallyDerived = new DerivedClass();  // POSEBAN SLUCAJ
+>>>>>>> c636db93544f07e247aecbf038b0028e6c082f55
             DerivedClass isClearlyDerived = new DerivedClass();
 
             isReallyBase.WriteNum(); // writes 12
